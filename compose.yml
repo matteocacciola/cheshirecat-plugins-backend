@@ -1,0 +1,16 @@
+services:
+
+  cheshire-cat-plugins-backend:
+    build:
+      context: .
+    container_name: cheshire_cat_plugins_backend
+    environment:
+      - GITHUB_PLUGINS_JSON_URL=${GITHUB_PLUGINS_JSON_URL:-https://raw.githubusercontent.com/matteocacciola/cheshirecat-plugins/main/plugins.json}
+      - DEFAULT_PAGE_SIZE=${DEFAULT_PAGE_SIZE:-10}
+      - CACHE_DURATION_MINUTES=${CACHE_DURATION_MINUTES:-1440}
+      - RELOAD=${RELOAD:-""}
+    ports:
+      - "8001:80"
+    volumes:
+      - ./:/app
+    restart: unless-stopped

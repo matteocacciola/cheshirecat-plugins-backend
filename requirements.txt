@@ -1,0 +1,8 @@
+uvicorn
+httpx
+fastapi
+typing
+gitpython
+kaleido
+plotly
+pandas
