@@ -23,7 +23,7 @@ backend = Endpoints(
 backend.customize_openapi(
     "😸 Cheshire Cat AI - Plugins Registry",
     "https://cheshirecat.ai/wp-content/uploads/2023/10/Logo-Cheshire-Cat.svg",
-    "1.0.1",
+    "1.0.0",
     "The Backend API to manage, filter, and download all the plugins in the official registry of Enterprise version of The Cheshire Cat AI."
 )
 
